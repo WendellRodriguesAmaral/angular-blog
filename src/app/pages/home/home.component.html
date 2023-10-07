@@ -1,0 +1,23 @@
+
+<app-menu-tittle></app-menu-tittle>
+<div class="container__articles">
+    <div class="articles__main">
+        <app-big-card
+        [photoCover]="posts[0].photo"
+        [cardDescription]="posts[0].description" 
+        [cardTitle]="posts[0].title"
+        [id]="posts[0].id"
+        >
+        </app-big-card>
+    </div>
+
+    <div class="articles__others" >
+        <app-small-card *ngFor="let post of postsWithoutFirts"
+         [photoCover]="post.photo"
+         [cardTitle]="post.title"
+         [cardDescription]="post.description"
+         [id]="post.id"
+        ></app-small-card> 
+       
+    </div>
+</div>
